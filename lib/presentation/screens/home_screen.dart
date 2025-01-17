@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                         begin: Alignment.center,
                         end: Alignment.topCenter,
                         colors: [
-                          Colors.black.withOpacity(1),
+                          Colors.black,
                           Colors.transparent,
                         ],
                       ),
@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                         const ProfileQuestion(),
                         const SizedBox(height: 24),
                         const QuestionOptions(),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 25),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 4),
                           child: Row(
@@ -90,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Spacer(),
+                  const SizedBox(height: 20),
                   const CustomNavBar(),
                   const SizedBox(height: 8),
                 ],

@@ -7,8 +7,6 @@ import '../widgets/header.dart';
 import '../widgets/profile_section.dart';
 import '../widgets/question_options.dart';
 
-
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -58,7 +56,6 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(height: 24),
                         const QuestionOptions(),
                         const SizedBox(height: 20),
-                        
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 4),
                           child: Row(
@@ -75,12 +72,16 @@ class HomeScreen extends StatelessWidget {
                               ActionButton(
                                 icon: Icons.mic,
                                 color: AppColors.purple,
+                                bgColor: Colors.black,
+                                iconColor: AppColors.purple,
                                 onTap: () {},
                               ),
                               const SizedBox(width: 12),
                               ActionButton(
                                 icon: Icons.arrow_forward,
-                                color: AppColors.purple,
+                                color: Colors.black,
+                                iconColor: Colors.black,
+                                bgColor: AppColors.purple,
                                 onTap: () {},
                               ),
                             ],
@@ -101,4 +102,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-

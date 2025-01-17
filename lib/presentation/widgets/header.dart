@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../constants/colors.dart';
+
 class HeaderTitle extends StatelessWidget {
   const HeaderTitle({super.key});
 
@@ -8,30 +10,35 @@ class HeaderTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
-          'Stroll Bonfire',
-          style: GoogleFonts.inter(
-            fontSize: 32,
-            fontWeight: FontWeight.w600,
-            color: Colors.purple.shade100,
-            shadows: [
-              const Shadow(
-                color: Colors.black26,
-                offset: Offset(0, 2),
-                blurRadius: 4,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Stroll Bonfire',
+              style: GoogleFonts.inter(
+                fontSize: 32,
+                fontWeight: FontWeight.w600,
+                color: Colors.purple.shade100,
+                shadows: [
+                  const Shadow(
+                    color: Colors.black45,
+                    offset: Offset(0, 2),
+                    blurRadius: 4,
+                  ),
+                  Shadow(
+                    color: AppColors.purple,
+                    offset: const Offset(0, 0),
+                    blurRadius: 20,
+                  ),
+                ],
               ),
-              Shadow(
-                color: Colors.purple.shade200.withOpacity(0.5),
-                offset: const Offset(0, 0),
-                blurRadius: 20,
-              ),
-            ],
-          ),
-        ),
-        const Icon(
-          Icons.keyboard_arrow_down,
-          color: Colors.white,
-          size: 20,
+            ),
+            const Icon(
+              Icons.keyboard_arrow_down,
+              color: Colors.white,
+              size: 36,
+            ),
+          ],
         ),
         const SizedBox(height: 8),
         Container(
@@ -63,4 +70,3 @@ class HeaderTitle extends StatelessWidget {
     );
   }
 }
-

@@ -17,7 +17,7 @@ class ProfileQuestion extends StatelessWidget {
                 border: Border.all(color: Colors.white, width: 2),
                 image: const DecorationImage(
                   image: NetworkImage(
-                      'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RQErnnPgbTMSj7GXq07e5u0ZO8NwWf.png'),
+                      ''),
                   fit: BoxFit.cover,
                 ),
               ),

@@ -78,14 +78,14 @@ class OptionButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
             color: isSelected ? AppColors.purple : Colors.transparent,
-            width: 1.5,
+            width: 2,
           ),
         ),
         child: Row(
           children: [
             Container(
               width: 32,
-              height: 32,
+              height: 42,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(

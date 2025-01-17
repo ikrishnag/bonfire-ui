@@ -16,10 +16,10 @@ class ProfileQuestion extends StatelessWidget {
               height: 50,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: const Color.fromARGB(255, 50, 50, 50), width: 3),
+                border: Border.all(
+                    color: const Color.fromARGB(255, 50, 50, 50), width: 3),
                 image: const DecorationImage(
-                  image: AssetImage(
-                      'assets/images/joey.jpg'),
+                  image: AssetImage('assets/images/joey.jpg'),
                   fit: BoxFit.contain,
                 ),
               ),
@@ -35,20 +35,21 @@ class ProfileQuestion extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 0),
         const Text(
           'What is your favorite time\nof the day?',
           style: TextStyle(
             fontSize: 24,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.bold,
             color: Colors.white,
-            height: 1.2,
+            height: 1.3,
+            letterSpacing: 1,
           ),
-          textAlign: TextAlign.center,
+          textAlign: TextAlign.left,
         ),
         const SizedBox(height: 8),
         Text(
-          'Mine is definitely the peace in the morning.',
+          '"Mine is definitely the peace in the morning."',
           style: TextStyle(
             fontSize: 15,
             color: AppColors.lightPurple,

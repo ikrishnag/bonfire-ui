@@ -68,14 +68,17 @@ class _NavBarIcon extends StatelessWidget {
             ),
             if (hasNotification)
               Positioned(
-                top: 10,
-                right: 10,
+                top: 14,
+                right: 9,
                 child: Container(
                   width: 15,
                   height: 10,
                   decoration: BoxDecoration(
                     color: AppColors.badgePurple,
-                    shape: BoxShape.circle,
+                    // shape: BoxShape.circle,
+                    borderRadius: BorderRadius.circular(12),
+
+                    
                   ),
                 ),
               ),

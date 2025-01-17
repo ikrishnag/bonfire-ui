@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/colors.dart';
+
 class ProfileQuestion extends StatelessWidget {
   const ProfileQuestion({super.key});
 
@@ -49,7 +51,7 @@ class ProfileQuestion extends StatelessWidget {
           'Mine is definitely the peace in the morning.',
           style: TextStyle(
             fontSize: 15,
-            color: Colors.white.withOpacity(0.7),
+            color: AppColors.lightPurple,
             fontStyle: FontStyle.italic,
           ),
         ),

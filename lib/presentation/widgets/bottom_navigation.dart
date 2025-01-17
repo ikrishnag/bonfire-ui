@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stroll_fe_task/constants/colors.dart';
 
 class CustomNavBar extends StatelessWidget {
   const CustomNavBar({super.key});
@@ -8,7 +9,7 @@ class CustomNavBar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16),
       decoration: BoxDecoration(
-        color: Colors.black.withOpacity(0.2),
+        color: const Color.fromARGB(255, 15, 17, 21),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -23,12 +24,12 @@ class CustomNavBar extends StatelessWidget {
             onTap: () {},
           ),
           _NavBarIcon(
-            icon: Icons.chat_bubble_outline,
+            icon: Icons.chat_bubble,
             badge: '10',
             onTap: () {},
           ),
           _NavBarIcon(
-            icon: Icons.person_outline,
+            icon: Icons.person_rounded,
             onTap: () {},
           ),
         ],
@@ -67,13 +68,13 @@ class _NavBarIcon extends StatelessWidget {
             ),
             if (hasNotification)
               Positioned(
-                top: 12,
-                right: 12,
+                top: 10,
+                right: 10,
                 child: Container(
-                  width: 8,
-                  height: 8,
+                  width: 15,
+                  height: 10,
                   decoration: BoxDecoration(
-                    color: Colors.purple.shade300,
+                    color: AppColors.badgePurple,
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -86,13 +87,14 @@ class _NavBarIcon extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration: BoxDecoration(
-                    color: Colors.purple.shade300,
+                    color: AppColors.badgePurple,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text(
                     badge!,
                     style: const TextStyle(
                       fontSize: 12,
+                      color: Colors.black,
                       fontWeight: FontWeight.w500,
                     ),
                   ),

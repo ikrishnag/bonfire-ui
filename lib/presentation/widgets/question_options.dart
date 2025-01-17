@@ -1,9 +1,5 @@
-
-
-
 import 'package:flutter/material.dart';
-
-
+import 'package:stroll_fe_task/constants/colors.dart';
 
 class QuestionOptions extends StatelessWidget {
   const QuestionOptions({super.key});
@@ -57,8 +53,6 @@ class QuestionOptions extends StatelessWidget {
   }
 }
 
-
-
 class OptionButton extends StatelessWidget {
   final String label;
   final String index;
@@ -66,6 +60,7 @@ class OptionButton extends StatelessWidget {
   final VoidCallback onTap;
 
   const OptionButton({
+    super.key,
     required this.label,
     required this.index,
     required this.onTap,
@@ -79,12 +74,10 @@ class OptionButton extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: isSelected
-              ? Colors.blue.shade400.withOpacity(0.2)
-              : Colors.black.withOpacity(0.3),
+          color: AppColors.darkGrey,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: isSelected ? Colors.blue.shade400 : Colors.transparent,
+            color: isSelected ? AppColors.purple : Colors.transparent,
             width: 1.5,
           ),
         ),
@@ -95,7 +88,11 @@ class OptionButton extends StatelessWidget {
               height: 32,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.white.withOpacity(0.15),
+                border: Border.all(
+                  color: isSelected ? AppColors.purple : Colors.white,
+                  width: 1.5,
+                ),
+                color: isSelected ? AppColors.purple :  Colors.transparent
               ),
               child: Center(
                 child: Text(
@@ -103,7 +100,7 @@ class OptionButton extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w500,
-                    color: isSelected ? Colors.blue.shade400 : Colors.white,
+                    color: Colors.white,
                   ),
                 ),
               ),

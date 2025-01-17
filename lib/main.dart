@@ -22,7 +22,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: Colors.black,
-        textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme),
+        textTheme: GoogleFonts.montserratTextTheme(
+          ThemeData.dark().textTheme,
+        ),
       ),
       home: HomeScreen()
     );

@@ -14,11 +14,11 @@ class ProfileQuestion extends StatelessWidget {
               height: 50,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: Colors.white, width: 2),
+                border: Border.all(color: const Color.fromARGB(255, 50, 50, 50), width: 3),
                 image: const DecorationImage(
-                  image: NetworkImage(
-                      ''),
-                  fit: BoxFit.cover,
+                  image: AssetImage(
+                      'assets/images/joey.jpg'),
+                  fit: BoxFit.contain,
                 ),
               ),
             ),

@@ -42,11 +42,8 @@ class HeaderTitle extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-          decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.2),
-            borderRadius: BorderRadius.circular(20),
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+  
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [

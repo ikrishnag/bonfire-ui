@@ -18,8 +18,10 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/sunset.jpg'),
-            fit: BoxFit.cover,
+            image: AssetImage('assets/images/sunset-final.png'),
+            // fit: BoxFit.cover,
+            fit: BoxFit.fitWidth,
+            alignment: Alignment.topRight,
           ),
         ),
         child: SafeArea(
@@ -29,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: MediaQuery.of(context).size.height / 1.75,
+                    height: MediaQuery.of(context).size.height / 1.4,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.center,
@@ -45,7 +47,7 @@ class HomeScreen extends StatelessWidget {
               ),
               Column(
                 children: [
-                  const SizedBox(height: 90),
+                  const SizedBox(height: 50),
                   const HeaderTitle(),
                   const Spacer(),
                   Padding(
@@ -56,6 +58,7 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(height: 24),
                         const QuestionOptions(),
                         const SizedBox(height: 20),
+                        
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 4),
                           child: Row(

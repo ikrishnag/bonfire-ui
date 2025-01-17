@@ -29,7 +29,7 @@ class CustomNavBar extends StatelessWidget {
             onTap: () {},
           ),
           _NavBarIcon(
-            icon: Icons.person_rounded,
+            icon: Icons.person_outline_rounded,
             onTap: () {}, 
           ),
         ],

@@ -87,13 +87,12 @@ class OptionButton extends StatelessWidget {
               width: 32,
               height: 42,
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: isSelected ? AppColors.purple : Colors.white,
-                  width: 1.5,
-                ),
-                color: isSelected ? AppColors.purple :  Colors.transparent
-              ),
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: isSelected ? AppColors.purple : Colors.white,
+                    width: 1.5,
+                  ),
+                  color: isSelected ? AppColors.purple : Colors.transparent),
               child: Center(
                 child: Text(
                   index,
@@ -111,7 +110,7 @@ class OptionButton extends StatelessWidget {
                 label,
                 style: TextStyle(
                   fontSize: 15,
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white.withValues(alpha: 0.9),
                   height: 1.2,
                 ),
               ),

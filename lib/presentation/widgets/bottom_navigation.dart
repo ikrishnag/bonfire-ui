@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stroll_fe_task/constants/colors.dart';
 
 class CustomNavBar extends StatelessWidget {
@@ -8,29 +9,29 @@ class CustomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16),
-      decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 15, 17, 21),
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(255, 15, 17, 21),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _NavBarIcon(
-            icon: Icons.style_outlined,
+            svgAsset: 'assets/icons/card.svg',
             onTap: () {},
           ),
           _NavBarIcon(
-            icon: Icons.local_fire_department_outlined,
+            svgAsset: 'assets/icons/bonfire.svg',
             hasNotification: true,
             onTap: () {},
           ),
           _NavBarIcon(
-            icon: Icons.chat_bubble,
+            svgAsset: 'assets/icons/message.svg',
             badge: '10',
             onTap: () {},
           ),
           _NavBarIcon(
-            icon: Icons.person_outline_rounded,
-            onTap: () {}, 
+            svgAsset: 'assets/icons/user.svg',
+            onTap: () {},
           ),
         ],
       ),
@@ -39,13 +40,13 @@ class CustomNavBar extends StatelessWidget {
 }
 
 class _NavBarIcon extends StatelessWidget {
-  final IconData icon;
+  final String svgAsset;
   final String? badge;
   final bool hasNotification;
   final VoidCallback onTap;
 
   const _NavBarIcon({
-    required this.icon,
+    required this.svgAsset,
     required this.onTap,
     this.badge,
     this.hasNotification = false,
@@ -61,44 +62,50 @@ class _NavBarIcon extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Icon(
-              icon,
-              color: Colors.white,
-              size: 28,
+            // SVG Icon
+            SvgPicture.asset(
+              svgAsset,
+              width: 28,
+              height: 30,
             ),
             if (hasNotification)
               Positioned(
-                top: 14,
-                right: 9,
+                top: 10,
+                right: -1,
                 child: Container(
-                  width: 15,
-                  height: 10,
+                  width: 18,
+                  height: 16,
                   decoration: BoxDecoration(
                     color: AppColors.badgePurple,
-                    // shape: BoxShape.circle,
-                    borderRadius: BorderRadius.circular(12),
-
-                    
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                        color: Color.fromARGB(255, 15, 17, 21),
+                        width: 2),
                   ),
                 ),
               ),
             if (badge != null)
               Positioned(
-                top: 8,
-                right: 8,
+                top: 10,
+                right: 2,
                 child: Container(
+            
                   padding:
                       const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration: BoxDecoration(
                     color: AppColors.badgePurple,
                     borderRadius: BorderRadius.circular(10),
+                     border: Border.all(
+                        color: Color.fromARGB(255, 15, 17, 21),
+                        width: 2),
+                  
                   ),
                   child: Text(
                     badge!,
                     style: const TextStyle(
-                      fontSize: 12,
+                      fontSize: 8,
                       color: Colors.black,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),

@@ -13,35 +13,35 @@ class QuestionOptions extends StatelessWidget {
           children: [
             Expanded(
               child: OptionButton(
-                label: 'The peace in the\nearly mornings',
+                label: 'The peace in the early mornings',
                 index: 'A',
                 onTap: () {},
               ),
             ),
-            SizedBox(width: 12.w),
+            SizedBox(width: 11.w),
             Expanded(
               child: OptionButton(
-                label: 'The magical\ngolden hours',
+                label: 'The magical golden hours',
                 index: 'B',
                 onTap: () {},
               ),
             ),
           ],
         ),
-        SizedBox(height: 12.h),
+        SizedBox(height: 11.h),
         Row(
           children: [
             Expanded(
               child: OptionButton(
-                label: 'Wind-down time\nafter dinners',
+                label: 'Wind-down time after dinners',
                 index: 'C',
                 onTap: () {},
               ),
             ),
-            SizedBox(width: 12.w),
+            SizedBox(width: 11.w),
             Expanded(
               child: OptionButton(
-                label: 'The serenity past\nmidnight',
+                label: 'The serenity past midnight',
                 index: 'D',
                 isSelected: true,
                 onTap: () {},
@@ -73,7 +73,11 @@ class OptionButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(16.w),
+        padding: EdgeInsets.all(14.w),
+        constraints: BoxConstraints(
+          minWidth: 160.w,
+          minHeight: 80.h,
+        ),
         decoration: BoxDecoration(
           color: AppColors.darkGrey,
           borderRadius: BorderRadius.circular(16.r),
@@ -111,8 +115,8 @@ class OptionButton extends StatelessWidget {
               child: Text(
                 label,
                 style: TextStyle(
-                  fontSize: 15.sp,
-                  color: Colors.white.withOpacity(0.9),
+                  fontSize: 13.sp,
+                  color: Colors.white,
                   height: 1.2,
                 ),
               ),

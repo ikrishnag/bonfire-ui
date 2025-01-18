@@ -16,137 +16,123 @@ class HeaderTitle extends StatelessWidget {
             Text(
               'Stroll Bonfire',
               style: GoogleFonts.inter(
-                fontSize: 32.sp,
+                fontSize: 30.sp,
                 fontWeight: FontWeight.w600,
-                color: AppColors.headingPurple,
-                shadows: [
-                  Shadow(
-                    color: Colors.black26,
-                    offset: Offset(0, 0),
-                    blurRadius: 40.r,
-                  ),
-                  Shadow(
-                    color: Colors.black45,
-                    offset: Offset(0, 3.h),
-                    blurRadius: 15.r,
-                  ),
-                ],
+                color: AppColors.headingPurple, 
+                shadows: _defaultShadows,
               ),
             ),
             Icon(
               Icons.keyboard_arrow_down_rounded,
               color: const Color.fromARGB(255, 217, 215, 252),
+              size: 34.sp,
               shadows: [
                 Shadow(
-                  color: Colors.black12,
-                  offset: Offset(0, 2.h),
+                  color: const Color.fromRGBO(52, 35, 47, 0.5),
+                  offset: Offset(0, 1.h),
                   blurRadius: 4.r,
                 ),
-                Shadow(
-                  color: Colors.black12,
-                  offset: Offset(0, 2.h),
-                  blurRadius: 20.r,
-                ),
               ],
-              size: 34.sp,
             ),
           ],
         ),
-        SizedBox(height: 8.h),
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 0),
+        SizedBox(height: 4.h),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 12.w),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Text(
-                    String.fromCharCode(Icons.access_time.codePoint),
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      fontFamily: Icons.access_time.fontFamily,
-                      package: Icons.access_time.fontPackage,
-                      color: Colors.transparent,
-                      shadows: [
-                        Shadow(
-                          color: Colors.black.withOpacity(0.5),
-                          offset: Offset(0, 2.h),
-                          blurRadius: 4.r,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Icon(Icons.access_time, size: 14.sp, color: Colors.white),
-                ],
-              ),
-              SizedBox(width: 4.w),
-              Text(
-                '22h 00m',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w600,
-                  shadows: [
-                    Shadow(
-                      color: const Color.fromRGBO(0, 0, 0, 0.3),
-                      offset: Offset(0, 1.h),
-                      blurRadius: 1.r,
-                    ),
-                    Shadow(
-                      color: const Color.fromRGBO(0, 0, 0, 0.2),
-                      offset: Offset(0, 1.h),
-                      blurRadius: 4.r,
-                    ),
-                  ],
-                ),
-              ),
+              buildClockWithShadow(),
+              SizedBox(width: 6.w),
+              buildTextWithShadow('22h 00m'),
               SizedBox(width: 8.w),
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Text(
-                    String.fromCharCode(Icons.person_outline.codePoint),
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontFamily: Icons.person_outline.fontFamily,
-                      package: Icons.person_outline.fontPackage,
-                      color: Colors.transparent,
-                      shadows: [
-                        Shadow(
-                          color: Colors.black.withOpacity(0.5),
-                          offset: Offset(0, 2.h),
-                          blurRadius: 4.r,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Icon(Icons.person_outline, size: 16.sp, color: Colors.white),
-                ],
-              ),
-              SizedBox(width: 4.w),
-              Text(
-                '103',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w600,
-                  shadows: [
-                    Shadow(
-                      color: const Color.fromRGBO(0, 0, 0, 0.3),
-                      offset: Offset(0, 1.h),
-                      blurRadius: 1.r,
-                    ),
-                    Shadow(
-                      color: const Color.fromRGBO(0, 0, 0, 0.2),
-                      offset: Offset(0, 1.h),
-                      blurRadius: 4.r,
-                    ),
-                  ],
-                ),
-              ),
+              buildIconWithShadow(Icons.person_outline),
+              SizedBox(width: 3.w),
+              buildTextWithShadow('103'),
             ],
           ),
+        ),
+      ],
+    );
+  }
+
+  List<Shadow> get _defaultShadows => [
+        Shadow(
+          color: const Color(0x33000000),
+          offset: Offset(0, 0),
+          blurRadius: 7.9.r,
+        ),
+        Shadow(
+          color: const Color(0xFFBEBEBE),
+          offset: Offset(0, 0),
+          blurRadius: 2.r,
+        ),
+        Shadow(
+          color: const Color.fromRGBO(52, 35, 47, 0.5),
+          offset: Offset(0, 1.h),
+          blurRadius: 2.r,
+        ),
+      ];
+
+  Widget buildClockWithShadow() {
+    return Stack(
+      children: [
+        Transform.translate(
+          offset: Offset(0, 1.h),
+          child: Image.asset(
+            'assets/icons/clock.png',
+            height: 14.sp,
+            color: const Color.fromRGBO(0, 0, 0, 0.65),
+            colorBlendMode: BlendMode.srcATop,
+          ),
+        ),
+        Image.asset(
+          'assets/icons/clock.png',
+          height: 14.sp,
+          color: Colors.white,
+        ),
+      ],
+    );
+  }
+
+  Widget buildTextWithShadow(String text) {
+    return Text(
+      text,
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w600,
+        shadows: [
+          Shadow(
+            color: const Color.fromRGBO(0, 0, 0, 0.3),
+            offset: Offset(0, 1.h),
+            blurRadius: 1.r,
+          ),
+          Shadow(
+            color: const Color.fromRGBO(0, 0, 0, 0.2),
+            offset: Offset(0, 1.h),
+            blurRadius: 4.r,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildIconWithShadow(IconData icon) {
+    return Icon(
+      icon,
+      size: 16.sp,
+      color: Colors.white,
+      shadows: [
+        Shadow(
+          color: const Color.fromRGBO(0, 0, 0, 0.3),
+          offset: Offset(0, 1.h),
+          blurRadius: 1.r,
+        ),
+        Shadow(
+          color: const Color.fromRGBO(0, 0, 0, 0.2),
+          offset: Offset(0, 1.h),
+          blurRadius: 4.r,
         ),
       ],
     );

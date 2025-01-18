@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/colors.dart';
 import '../widgets/actions_bottom.dart';
 import '../widgets/bottom_navigation.dart';
@@ -17,7 +17,6 @@ class HomeScreen extends StatelessWidget {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/sunset-final.png'),
-            // fit: BoxFit.cover,
             fit: BoxFit.fitWidth,
             alignment: Alignment.topRight,
           ),
@@ -29,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: MediaQuery.of(context).size.height/1.4,
+                    height: 0.7.sh,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.center,
@@ -42,46 +41,45 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-              ), 
-              
-              Positioned.fill(
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Container(
-                    height: MediaQuery.of(context).size.height / 1.4,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.center,
-                        colors: [
-                          Colors.transparent,
-                          Colors.black45,
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
               ),
+              // Positioned.fill(
+              //   child: Align(
+              //     alignment: Alignment.topCenter,
+              //     child: Container(
+              //       height: 1.1.sh,
+              //       decoration: BoxDecoration(
+              //         gradient: LinearGradient(
+              //           begin: Alignment.topCenter,
+              //           end: Alignment.center,
+              //           colors: [
+              //             Colors.transparent,
+              //             Colors.black45,
+              //           ],
+              //         ),
+              //       ),
+              //     ),
+              //   ),
+              // ),
               Column(
                 children: [
-                  const SizedBox(height: 50),
+                  SizedBox(height: 50.h),
                   const HeaderTitle(),
                   const Spacer(),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 20.w),
                     child: Column(
                       children: [
                         const ProfileQuestion(),
                         const QuestionOptions(),
-                        const SizedBox(height: 12),
+                        SizedBox(height: 12.h),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 4),
+                          padding: EdgeInsets.symmetric(horizontal: 4.w),
                           child: Row(
                             children: [
-                              const Text(
+                              Text(
                                 'Pick your option.\nSee who has a similar mind.',
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 15.sp,
                                   color: Colors.white70,
                                   height: 1.3,
                                 ),
@@ -94,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                                 iconColor: AppColors.purple,
                                 onTap: () {},
                               ),
-                              const SizedBox(width: 12),
+                              SizedBox(width: 12.w),
                               ActionButton(
                                 icon: Icons.arrow_forward,
                                 color: Colors.black,
@@ -108,9 +106,9 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12.h),
                   const CustomNavBar(),
-                  const SizedBox(height: 2),
+                  SizedBox(height: 2.h),
                 ],
               ),
             ],

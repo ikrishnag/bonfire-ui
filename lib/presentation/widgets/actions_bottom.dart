@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/colors.dart';
 
@@ -7,14 +8,15 @@ class ActionButton extends StatelessWidget {
   final Color color;
   final Color bgColor;
   final Color iconColor;
-  
   final VoidCallback onTap;
 
   const ActionButton({
     super.key,
     required this.icon,
     required this.color,
-    required this.onTap, required this.bgColor, required this.iconColor,
+    required this.onTap,
+    required this.bgColor,
+    required this.iconColor,
   });
 
   @override
@@ -22,12 +24,12 @@ class ActionButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 48,
-        height: 48,
+        width: 48.w,
+        height: 48.h,
         decoration: BoxDecoration(
           border: Border.all(
             color: AppColors.purple,
-            width: 2,
+            width: 2.w,
           ),
           shape: BoxShape.circle,
           color: bgColor,
@@ -35,7 +37,7 @@ class ActionButton extends StatelessWidget {
         child: Icon(
           icon,
           color: iconColor,
-          size: 24,
+          size: 24.sp,
         ),
       ),
     );

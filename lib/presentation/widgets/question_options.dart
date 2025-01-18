@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:stroll_fe_task/constants/colors.dart';
 
 class QuestionOptions extends StatelessWidget {
@@ -17,7 +18,7 @@ class QuestionOptions extends StatelessWidget {
                 onTap: () {},
               ),
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12.w),
             Expanded(
               child: OptionButton(
                 label: 'The magical\ngolden hours',
@@ -27,7 +28,7 @@ class QuestionOptions extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: 12.h),
         Row(
           children: [
             Expanded(
@@ -37,7 +38,7 @@ class QuestionOptions extends StatelessWidget {
                 onTap: () {},
               ),
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12.w),
             Expanded(
               child: OptionButton(
                 label: 'The serenity past\nmidnight',
@@ -72,45 +73,46 @@ class OptionButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(16.w),
         decoration: BoxDecoration(
           color: AppColors.darkGrey,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           border: Border.all(
             color: isSelected ? AppColors.purple : Colors.transparent,
-            width: 2,
+            width: 2.w,
           ),
         ),
         child: Row(
           children: [
             Container(
-              width: 32,
-              height: 42,
+              width: 32.w,
+              height: 42.h,
               decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                    color: isSelected ? AppColors.purple : Colors.white,
-                    width: 1.5,
-                  ),
-                  color: isSelected ? AppColors.purple : Colors.transparent),
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: isSelected ? AppColors.purple : Colors.white,
+                  width: 1.5.w,
+                ),
+                color: isSelected ? AppColors.purple : Colors.transparent,
+              ),
               child: Center(
                 child: Text(
                   index,
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 15.sp,
                     fontWeight: FontWeight.w500,
                     color: Colors.white,
                   ),
                 ),
               ),
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12.w),
             Expanded(
               child: Text(
                 label,
                 style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.white.withValues(alpha: 0.9),
+                  fontSize: 15.sp,
+                  color: Colors.white.withOpacity(0.9),
                   height: 1.2,
                 ),
               ),

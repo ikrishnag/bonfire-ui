@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/colors.dart';
 
 class ProfileQuestion extends StatelessWidget {
   const ProfileQuestion({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -10,18 +12,18 @@ class ProfileQuestion extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: 40,
-            top: 40,
+            left: 40.w,
+            top: 40.h,
             child: Container(
-              padding: const EdgeInsets.only(left: 30, right: 10, top: 4, bottom: 4),
+              padding: EdgeInsets.only(left: 30.w, right: 10.w, top: 4.h, bottom: 4.h),
               decoration: BoxDecoration(
                 color: const Color.fromRGBO(18, 21, 24, 0.9),
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(20.r),
               ),
-              child: const Text(
+              child:  Text(
                 'Angelina, 28',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.w600,
                   color: Colors.white,
                 ),
@@ -29,27 +31,27 @@ class ProfileQuestion extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 20, bottom: 20),
+            padding: EdgeInsets.only(top: 20.h, bottom: 20.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: 100,
+                  height: 100.h,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 13.0),
+                        padding: EdgeInsets.only(top: 13.h),
                         child: SizedBox(
-                          width: 70,
+                          width: 70.w,
                           child: Container(
-                            width: 80,
-                            height: 80,
+                            width: 80.w,
+                            height: 80.h,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
                                 color: const Color.fromRGBO(18, 21, 24, 1),
-                                width: 5,
+                                width: 5.w,
                               ),
                               image: const DecorationImage(
                                 image: AssetImage('assets/images/joey.jpg'),
@@ -61,11 +63,11 @@ class ProfileQuestion extends StatelessWidget {
                       ),
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 50, left: 6),
+                          padding: EdgeInsets.only(top: 50.h, left: 6.w),
                           child: Text(
                             'What is your favorite time\nof the day?',
-                            style: const TextStyle(
-                              fontSize: 22,
+                            style: TextStyle(
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.w800,
                               color: Colors.white,
                               height: 1.2,
@@ -78,12 +80,12 @@ class ProfileQuestion extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
+                  padding: EdgeInsets.only(top: 8.h),
                   child: Center(
                     child: Text(
                       '"Mine is definitely the peace in the morning."',
                       style: TextStyle(
-                        fontSize: 13,
+                        fontSize: 13.sp,
                         color: AppColors.lightPurple,
                         fontStyle: FontStyle.italic,
                       ),

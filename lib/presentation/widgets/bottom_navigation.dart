@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:stroll_fe_task/constants/colors.dart';
 
 class CustomNavBar extends StatelessWidget {
@@ -8,7 +9,7 @@ class CustomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 16),
+      padding: EdgeInsets.symmetric(vertical: 16.h),
       decoration: const BoxDecoration(
         color: Color.fromARGB(255, 15, 17, 21),
       ),
@@ -57,53 +58,55 @@ class _NavBarIcon extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        width: 48,
-        height: 48,
+        width: 48.w,
+        height: 48.h,
         child: Stack(
           alignment: Alignment.center,
           children: [
             // SVG Icon
             SvgPicture.asset(
               svgAsset,
-              width: 28,
-              height: 30,
+              width: 28.w,
+              height: 30.h,
             ),
             if (hasNotification)
               Positioned(
-                top: 10,
-                right: -1,
+                top: 10.h,
+                right: -1.w,
                 child: Container(
-                  width: 18,
-                  height: 16,
+                  width: 18.w,
+                  height: 16.h,
                   decoration: BoxDecoration(
                     color: AppColors.badgePurple,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10.r),
                     border: Border.all(
-                        color: Color.fromARGB(255, 15, 17, 21),
-                        width: 2),
+                      color: const Color.fromARGB(255, 15, 17, 21),
+                      width: 2.w,
+                    ),
                   ),
                 ),
               ),
             if (badge != null)
               Positioned(
-                top: 10,
-                right: 2,
+                top: 10.h,
+                right: 2.w,
                 child: Container(
-            
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 6.w,
+                    vertical: 2.h,
+                  ),
                   decoration: BoxDecoration(
                     color: AppColors.badgePurple,
-                    borderRadius: BorderRadius.circular(10),
-                     border: Border.all(
-                        color: Color.fromARGB(255, 15, 17, 21),
-                        width: 2),
-                  
+                    borderRadius: BorderRadius.circular(10.r),
+                    border: Border.all(
+                      color: const Color.fromARGB(255, 15, 17, 21),
+                      width: 2.w,
+                    ),
                   ),
                   child: Text(
                     badge!,
-                    style: const TextStyle(
-                      fontSize: 8,
+                    style: TextStyle(
+                      fontSize: 8.sp,
                       color: Colors.black,
                       fontWeight: FontWeight.w600,
                     ),

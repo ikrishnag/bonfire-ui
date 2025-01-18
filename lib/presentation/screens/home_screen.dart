@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                 child: Text(
                   'Pick your option.\nSee who has a similar mind.',
                   style: TextStyle(
-                    fontSize: 14.sp,
+                    fontSize: 13.sp,
                     color: Colors.white70,
                     height: 1.3,
                   ),

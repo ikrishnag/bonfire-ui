@@ -7,8 +7,8 @@ This project replicates a Figma design for Bonfire. It is built using Flutter wi
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/ikrishnag/bonfire-ui
+cd bonfire-ui
 ```
 
 ### Install Dependencies

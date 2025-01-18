@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: 0.7.sh,
+                    height: 0.8.sh,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.center,
@@ -42,70 +42,12 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              // Positioned.fill(
-              //   child: Align(
-              //     alignment: Alignment.topCenter,
-              //     child: Container(
-              //       height: 1.1.sh,
-              //       decoration: BoxDecoration(
-              //         gradient: LinearGradient(
-              //           begin: Alignment.topCenter,
-              //           end: Alignment.center,
-              //           colors: [
-              //             Colors.transparent,
-              //             Colors.black45,
-              //           ],
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
               Column(
                 children: [
-                  SizedBox(height: 50.h),
+                  SizedBox(height: 40.h),
                   const HeaderTitle(),
                   const Spacer(),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.w),
-                    child: Column(
-                      children: [
-                        const ProfileQuestion(),
-                        const QuestionOptions(),
-                        SizedBox(height: 12.h),
-                        Container(
-                          padding: EdgeInsets.symmetric(horizontal: 4.w),
-                          child: Row(
-                            children: [
-                              Text(
-                                'Pick your option.\nSee who has a similar mind.',
-                                style: TextStyle(
-                                  fontSize: 15.sp,
-                                  color: Colors.white70,
-                                  height: 1.3,
-                                ),
-                              ),
-                              const Spacer(),
-                              ActionButton(
-                                icon: Icons.mic,
-                                color: AppColors.purple,
-                                bgColor: Colors.black,
-                                iconColor: AppColors.purple,
-                                onTap: () {},
-                              ),
-                              SizedBox(width: 12.w),
-                              ActionButton(
-                                icon: Icons.arrow_forward,
-                                color: Colors.black,
-                                iconColor: Colors.black,
-                                bgColor: AppColors.purple,
-                                onTap: () {},
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  buildOptionsSection(),
                   SizedBox(height: 12.h),
                   const CustomNavBar(),
                   SizedBox(height: 2.h),
@@ -114,6 +56,48 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget buildOptionsSection() {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.w),
+      child: Column(
+        children: [
+          const ProfileQuestion(),
+          const QuestionOptions(),
+          SizedBox(height: 12.h),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'Pick your option.\nSee who has a similar mind.',
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    color: Colors.white70,
+                    height: 1.3,
+                  ),
+                ),
+              ),
+              ActionButton(
+                icon: Icons.mic,
+                color: AppColors.purple,
+                bgColor: Colors.black,
+                iconColor: AppColors.purple,
+                onTap: () {},
+              ),
+              SizedBox(width: 12.w),
+              ActionButton(
+                icon: Icons.arrow_forward,
+                color: Colors.black,
+                iconColor: Colors.black,
+                bgColor: AppColors.purple,
+                onTap: () {},
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

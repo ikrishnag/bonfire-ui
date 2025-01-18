@@ -18,7 +18,7 @@ class HeaderTitle extends StatelessWidget {
               style: GoogleFonts.inter(
                 fontSize: 30.sp,
                 fontWeight: FontWeight.w600,
-                color: AppColors.headingPurple, 
+                color: AppColors.headingPurple,
                 shadows: _defaultShadows,
               ),
             ),

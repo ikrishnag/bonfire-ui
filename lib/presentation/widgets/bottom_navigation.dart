@@ -104,7 +104,7 @@ class _NavBarIcon extends StatelessWidget {
                   child: Text(
                     badge!,
                     style: TextStyle(
-                      fontSize: 8.sp,
+                      fontSize: 7.sp,
                       color: Colors.black,
                       fontWeight: FontWeight.w600,
                     ),

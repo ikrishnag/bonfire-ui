@@ -5,18 +5,18 @@ import '../../constants/colors.dart';
 
 class ActionButton extends StatelessWidget {
   final IconData icon;
-  final Color backgroundColor; 
+  final Color backgroundColor;
   final Color iconColor;
-  final Color borderColor; 
+  final Color borderColor;
   final VoidCallback onTap;
 
   const ActionButton({
     super.key,
     required this.icon,
     required this.onTap,
-    this.backgroundColor = Colors.black, 
-    this.iconColor = Colors.white, 
-    this.borderColor = AppColors.purple, 
+    this.backgroundColor = Colors.black,
+    this.iconColor = Colors.white,
+    this.borderColor = AppColors.purple,
   });
 
   @override
@@ -28,15 +28,15 @@ class ActionButton extends StatelessWidget {
         height: 46.h,
         decoration: BoxDecoration(
           border: Border.all(
-            color: borderColor, 
+            color: borderColor,
             width: 2.w,
           ),
           shape: BoxShape.circle,
-          color: backgroundColor, 
+          color: backgroundColor,
         ),
         child: Icon(
           icon,
-          color: iconColor, 
+          color: iconColor,
           size: 24.sp,
         ),
       ),

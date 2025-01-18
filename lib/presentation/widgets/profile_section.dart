@@ -15,7 +15,7 @@ class ProfileQuestion extends StatelessWidget {
             left: 38.w,
             top: 40.h,
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 4.h),
+              padding: EdgeInsets.only(left: 40.w, right: 10.w, top: 4.h, bottom: 4.h),
               decoration: BoxDecoration(
                 color: const Color.fromRGBO(18, 21, 24, 0.9),
                 borderRadius: BorderRadius.circular(20.r),

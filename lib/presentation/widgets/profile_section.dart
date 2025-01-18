@@ -12,18 +12,18 @@ class ProfileQuestion extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: 40.w,
+            left: 38.w,
             top: 40.h,
             child: Container(
-              padding: EdgeInsets.only(left: 30.w, right: 10.w, top: 4.h, bottom: 4.h),
+              padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 4.h),
               decoration: BoxDecoration(
                 color: const Color.fromRGBO(18, 21, 24, 0.9),
                 borderRadius: BorderRadius.circular(20.r),
               ),
-              child:  Text(
+              child: Text(
                 'Angelina, 28',
                 style: TextStyle(
-                  fontSize: 14.sp,
+                  fontSize: 13.sp,
                   fontWeight: FontWeight.w600,
                   color: Colors.white,
                 ),
@@ -31,7 +31,7 @@ class ProfileQuestion extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 20.h, bottom: 20.h),
+            padding: EdgeInsets.symmetric(vertical: 20.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -42,21 +42,18 @@ class ProfileQuestion extends StatelessWidget {
                     children: [
                       Padding(
                         padding: EdgeInsets.only(top: 13.h),
-                        child: SizedBox(
-                          width: 70.w,
-                          child: Container(
-                            width: 80.w,
-                            height: 80.h,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(
-                                color: const Color.fromRGBO(18, 21, 24, 1),
-                                width: 5.w,
-                              ),
-                              image: const DecorationImage(
-                                image: AssetImage('assets/images/joey.jpg'),
-                                fit: BoxFit.cover,
-                              ),
+                        child: Container(
+                          width: 75.w,
+                          height: 75.h,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: const Color.fromRGBO(18, 21, 24, 1),
+                              width: 5.w,
+                            ),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/joey.jpg'),
+                              fit: BoxFit.cover,
                             ),
                           ),
                         ),
@@ -67,11 +64,10 @@ class ProfileQuestion extends StatelessWidget {
                           child: Text(
                             'What is your favorite time\nof the day?',
                             style: TextStyle(
-                              fontSize: 22.sp,
+                              fontSize: 20.sp,
                               fontWeight: FontWeight.w800,
                               color: Colors.white,
                               height: 1.2,
-                              letterSpacing: -0.5,
                             ),
                           ),
                         ),
@@ -80,12 +76,12 @@ class ProfileQuestion extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 8.h),
+                  padding: EdgeInsets.only(top: 2.h),
                   child: Center(
                     child: Text(
                       '"Mine is definitely the peace in the morning."',
                       style: TextStyle(
-                        fontSize: 13.sp,
+                        fontSize: 12.sp,
                         color: AppColors.lightPurple,
                         fontStyle: FontStyle.italic,
                       ),

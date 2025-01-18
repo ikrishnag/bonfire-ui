@@ -13,13 +13,13 @@ class ProfileQuestion extends StatelessWidget {
             left: 40,
             top: 40,
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+              padding: const EdgeInsets.only(left: 30, right: 10, top: 4, bottom: 4),
               decoration: BoxDecoration(
                 color: const Color.fromRGBO(18, 21, 24, 0.9),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: const Text(
-                '  Angelina, 28',
+                'Angelina, 28',
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w600,

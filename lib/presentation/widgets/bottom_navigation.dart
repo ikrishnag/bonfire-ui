@@ -9,7 +9,7 @@ class CustomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 16.h),
+      padding: EdgeInsets.symmetric(vertical: 12.h),
       decoration: const BoxDecoration(
         color: Color.fromARGB(255, 15, 17, 21),
       ),
@@ -58,16 +58,14 @@ class _NavBarIcon extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        width: 48.w,
-        height: 48.h,
+        width: 46.w,
+        height: 46.h,
         child: Stack(
           alignment: Alignment.center,
           children: [
             // SVG Icon
             SvgPicture.asset(
               svgAsset,
-              width: 28.w,
-              height: 30.h,
             ),
             if (hasNotification)
               Positioned(

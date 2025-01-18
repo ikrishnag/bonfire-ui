@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    height: MediaQuery.of(context).size.height / 1.4,
+                    height: MediaQuery.of(context).size.height/1.4,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.center,
@@ -37,6 +37,25 @@ class HomeScreen extends StatelessWidget {
                         colors: [
                           Colors.black,
                           Colors.transparent,
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ), 
+              
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Container(
+                    height: MediaQuery.of(context).size.height / 1.4,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.center,
+                        colors: [
+                          Colors.transparent,
+                          Colors.black45,
                         ],
                       ),
                     ),
@@ -53,9 +72,8 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         const ProfileQuestion(),
-                        const SizedBox(height: 24),
                         const QuestionOptions(),
-                        const SizedBox(height: 25),
+                        const SizedBox(height: 12),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 4),
                           child: Row(
@@ -90,9 +108,9 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 12),
                   const CustomNavBar(),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 2),
                 ],
               ),
             ],

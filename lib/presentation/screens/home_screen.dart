@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/colors.dart';
-import '../widgets/actions_bottom.dart';
+import '../widgets/actions_button.dart';
 import '../widgets/bottom_navigation.dart';
 import '../widgets/header.dart';
 import '../widgets/profile_section.dart';
@@ -82,17 +82,17 @@ class HomeScreen extends StatelessWidget {
               ),
               ActionButton(
                 icon: Icons.mic,
-                color: AppColors.purple,
-                bgColor: Colors.black,
+                borderColor: AppColors.purple,
+                backgroundColor: Colors.black,
                 iconColor: AppColors.purple,
                 onTap: () {},
               ),
               SizedBox(width: 12.w),
               ActionButton(
                 icon: Icons.arrow_forward,
-                color: Colors.black,
+                borderColor: AppColors.purple,
                 iconColor: Colors.black,
-                bgColor: AppColors.purple,
+                backgroundColor: AppColors.purple,
                 onTap: () {},
               ),
             ],
